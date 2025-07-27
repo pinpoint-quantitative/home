@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pinpoint Quantitative delivers elite data science, AI/ML, and Snowflake solutions for investment management. Build a durable competitive advantage with a world-class data practitioner.">
+    <meta name="keywords" content="quantitative analytics, investment data science, AI for hedge funds, machine learning in finance, Snowflake consulting, dbt expert, alpha generation, risk management data">
+    <title>Pinpoint Quantitative | Elite Data & AI Solutions for Investment Management</title>
+    <style>
+        /* --- Font Import (Inter) --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        /* --- Root Variables (Sophisticated Charcoal & Blue Palette) --- */
+        :root {
+            --bg-color: #111111;
+            --card-bg: #1A1A1A;
+            --text-primary: #EAEAEA;
+            --text-secondary: #A0A0A0;
+            --accent-blue: #3B82F6;
+            --accent-blue-hover: #60A5FA;
+            --border-color: #2D2D2D;
+            --alt-bg: #181A1B;
+        }
+
+        /* --- General Resets & Body --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 18px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* --- Layout & Containers --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+        section:nth-of-type(even) {
+            background-color: var(--alt-bg);
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        /* --- Typography --- */
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        h1 {
+            font-size: 3.5rem; /* 56px */
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 2.5rem; /* 40px */
+        }
+        
+        h3 {
+            font-size: 1.5rem; /* 24px */
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+        
+        .lead {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            max-width: 750px;
+            margin: 0 auto 32px auto;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-blue-hover);
+        }
+
+        /* --- Header / Navigation --- */
+        .main-header {
+            padding: 24px 0;
+            position: sticky;
+            top: 0;
+            background-color: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.7rem;
+            letter-spacing: -1px;
+            color: var(--accent-blue);
+        }
+
+        .nav-links a {
+            margin-left: 36px;
+            font-weight: 500;
+            color: var(--text-primary);
+            font-size: 1.08rem;
+            letter-spacing: 0.1px;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a:focus {
+            border-bottom: 2px solid var(--accent-blue);
+            color: var(--accent-blue-hover);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            text-align: center;
+            padding: 120px 0 80px 0;
+        }
+
+        /* --- CTA Button --- */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: #FFFFFF;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(.4,1.7,.7,1.1);
+            box-shadow: 0 4px 24px rgba(59,130,246,0.10);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-blue-hover);
+            color: #FFFFFF;
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.18);
+        }
+
+        /* --- General Card & Grid Styles --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+            transition: transform 0.3s cubic-bezier(.4,1.7,.7,1.1), border-color 0.3s;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.01);
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 32px rgba(59,130,246,0.10);
+        }
+
+        .card p { font-size: 1rem; }
+        .card .icon { margin-bottom: 20px; color: var(--accent-blue); }
+
+        /* --- About Section --- */
+        #about .container {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        #about .bio-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: var(--card-bg); /* Placeholder for an image */
+            border: 2px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+        footer p, footer a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        footer .footer-links a {
+            margin: 0 12px;
+        }
+
+        @media (max-width: 900px) {
+            #about .container { flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.75rem; letter-spacing: -1.5px; }
+            h2 { font-size: 2rem; }
+            body { font-size: 16px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating CTA Button -->
+    <a href="#contact" class="cta-button" id="floating-cta" style="position:fixed;bottom:32px;right:32px;z-index:2000;box-shadow:0 4px 24px rgba(59,130,246,0.25);padding:14px 32px;font-size:1rem;display:none;">Book a Consultation</a>
+    <script>
+    // Show floating CTA after scrolling
+    window.addEventListener('scroll', function() {
+      var btn = document.getElementById('floating-cta');
+      if(window.scrollY > 400) { btn.style.display = 'inline-block'; } else { btn.style.display = 'none'; }
+    });
+    </script>
+
+    <script>
+    // Simple blog post toggling
+    function showBlogPost(id) {
+        document.querySelectorAll('.blog-post').forEach(post => {
+            post.style.display = 'none';
+        });
+        document.getElementById(id).style.display = 'block';
+        document.getElementById('blog-list').scrollIntoView({behavior: 'smooth'});
+    }
+    </script>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo">Pinpoint Quantitative</div>
+            <nav class="nav-links">
+                <a href="#offerings">What I Do</a>
+                <a href="#about">About</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Elite Data Science & AI for Investment Leaders</h1>
+                <p class="lead">
+                    I architect and build high-performance data ecosystems that empower investment managers to generate durable alpha, manage risk with precision, and create a definitive competitive moat.
+                </p>
+                <a href="#contact" class="cta-button">Schedule a Strategic Consultation</a>
+            </div>
+        </section>
+
+        <!-- BLOG SECTION (ALT BG) -->
+        <section id="blog" style="background-color: var(--alt-bg);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Insights & Blog</h2>
+                    <p class="lead" style="font-size: 1.15rem; margin-top: 16px;">Practical perspectives on data, analytics, and AI for investment management.</p>
+                </div>
+                <div id="blog-list" class="grid" style="margin-bottom: 40px;">
+                    <div class="card" style="cursor:pointer;" onclick="showBlogPost('blog1')">
+                        <h3>The Modern Data Stack: Powering Investment Analytics</h3>
+                        <p>How cloud-native tools like Snowflake and dbt are transforming the investment data landscape.</p>
+                        <span style="color:var(--accent-blue);font-size:0.95rem;">Read More →</span>
+                    </div>
+                    <div class="card" style="cursor:pointer;" onclick="showBlogPost('blog2')">
+                        <h3>Streamlit: Interactive Analytics for Investment Teams</h3>
+                        <p>Why Streamlit is the fastest way to deliver custom dashboards and analytics to portfolio managers.</p>
+                        <span style="color:var(--accent-blue);font-size:0.95rem;">Read More →</span>
+                    </div>
+                    <div class="card" style="cursor:pointer;" onclick="showBlogPost('blog3')">
+                        <h3>Data Tests & Surrogate Keys: The Bedrock of Reliable Analytics</h3>
+                        <p>How robust data testing and surrogate keys prevent silent errors and ensure trustworthy results.</p>
+                        <span style="color:var(--accent-blue);font-size:0.95rem;">Read More →</span>
+                    </div>
+                </div>
+                <!-- Blog Posts (hidden by default) -->
+                <div id="blog1" class="blog-post card" style="display:none;">
+                    <h3>The Modern Data Stack: Powering Investment Analytics</h3>
+                    <p><em>July 27, 2025</em></p>
+                    <p>The investment management industry is undergoing a quiet revolution, driven by the rise of the modern data stack. For decades, firms have struggled with legacy data warehouses, brittle ETL pipelines, and siloed systems that made it difficult to get a unified, reliable view of their data. Today, cloud-native platforms like <strong>Snowflake</strong> and transformation tools like <strong>dbt</strong> are changing the game, enabling investment teams to move faster, trust their data, and unlock new sources of value.</p>
+                    <p><strong>Snowflake</strong> has become the backbone of the modern data stack for many asset managers. Its architecture allows for virtually unlimited scalability, secure data sharing, and seamless integration with a growing ecosystem of analytics and AI tools. No more worrying about on-premises hardware, capacity planning, or slow batch jobs—Snowflake delivers performance and flexibility on demand.</p>
+                    <p>But a powerful data warehouse is only part of the story. <strong>dbt</strong> (data build tool) brings software engineering best practices to the world of data transformation. With dbt, you can version-control your SQL models, write automated tests to catch data quality issues before they reach your dashboards, and build modular, reusable code that scales as your business grows. This means faster iteration, fewer errors, and a data platform your team can actually trust.</p>
+                    <ul>
+                        <li><strong>Snowflake</strong> enables secure, scalable data sharing and eliminates the headaches of on-prem infrastructure.</li>
+                        <li><strong>dbt</strong> brings version control, testing, and modularity to your data transformations.</li>
+                        <li>Together, they empower investment teams to focus on alpha generation instead of data wrangling.</li>
+                    </ul>
+                    <p>Perhaps most importantly, the modern data stack is a foundation for advanced analytics and AI/ML initiatives. With clean, well-modeled data available in real time, quants and data scientists can experiment, prototype, and deploy new models with unprecedented speed. Firms that embrace this approach are positioned to outpace competitors still mired in manual processes and fragmented systems.</p>
+                    <p>Adopting the modern data stack isn’t just a technology upgrade—it’s a strategic investment in your firm’s future agility, insight, and performance.</p>
+                    <a href="#blog" onclick="this.parentElement.style.display='none';">← Back to Blog</a>
+                </div>
+                <div id="blog2" class="blog-post card" style="display:none;">
+                    <h3>Streamlit: Interactive Analytics for Investment Teams</h3>
+                    <p><em>July 27, 2025</em></p>
+                    <p>Delivering insights to portfolio managers and analysts shouldn’t require months of development or a dedicated front-end team. <strong>Streamlit</strong> is a Python-based framework that lets you build and deploy interactive dashboards in hours, not weeks. For investment teams, this means the ability to rapidly prototype, iterate, and share analytics tools that directly support decision-making.</p>
+                    <p>With Streamlit, quants and data scientists can turn their models and analyses into beautiful, interactive web apps using only Python. There’s no need to learn JavaScript, CSS, or complex web frameworks. You can connect directly to your data sources—whether it’s Snowflake, a REST API, or a local CSV—and visualize results in real time. This enables true self-service analytics, where portfolio managers can explore scenarios, tweak assumptions, and see the impact instantly.</p>
+                    <p>Some of the most powerful use cases I’ve seen include:</p>
+                    <ul>
+                        <li>Interactive performance attribution dashboards that let users drill into returns by sector, factor, or custom groupings.</li>
+                        <li>Risk model explorers where PMs can stress test portfolios and visualize exposures under different market regimes.</li>
+                        <li>Backtesting tools that allow for rapid hypothesis testing and strategy iteration, all in a secure, auditable environment.</li>
+                    </ul>
+                    <p>Streamlit bridges the gap between quantitative research and business decision-making, making advanced analytics accessible to everyone on your team. It also supports rapid feedback loops—if a PM wants a new metric or visualization, it can often be added in minutes, not days. This agility is a competitive advantage in today’s fast-moving markets.</p>
+                    <p>For investment managers looking to empower their teams and accelerate innovation, Streamlit is a game changer.</p>
+                    <a href="#blog" onclick="this.parentElement.style.display='none';">← Back to Blog</a>
+                </div>
+                <div id="blog3" class="blog-post card" style="display:none;">
+                    <h3>Data Tests & Surrogate Keys: The Bedrock of Reliable Analytics</h3>
+                    <p><em>July 27, 2025</em></p>
+                    <p>Silent data errors are the enemy of trustworthy analytics. In investment management, a single undetected issue—like a duplicate trade, a missing security, or a broken join—can lead to flawed reports, regulatory headaches, or even costly trading mistakes. Two of the most powerful tools for preventing these problems are <strong>data tests</strong> and the use of <strong>surrogate keys</strong> in your data models.</p>
+                    <p><strong>Data tests</strong> are automated checks that validate your data at every stage of the pipeline. Tools like dbt make it easy to write tests for uniqueness, non-null values, referential integrity, and custom business rules. For example, you can ensure that every trade has a valid security ID, that there are no duplicate positions, and that all required fields are populated. By catching issues early—before they reach your dashboards or downstream systems—you dramatically reduce the risk of silent errors.</p>
+                    <p>Equally important is the use of <strong>surrogate keys</strong>. In many financial datasets, natural keys (like account numbers or CUSIPs) are not stable or unique enough for reliable joins. Surrogate keys are system-generated, immutable identifiers that guarantee each record is distinct—even if the underlying business data changes. This is critical for building robust star schemas, tracking slowly changing dimensions, and ensuring that analytics are consistent over time.</p>
+                    <ul>
+                        <li><strong>Data tests</strong> (like those in dbt) catch issues early—missing values, duplicates, referential integrity problems—before they impact your analysis.</li>
+                        <li><strong>Surrogate keys</strong> provide a unique, stable identifier for each record, even when natural keys are messy or change over time.</li>
+                        <li>Together, they ensure your analytics are built on a foundation of clean, reliable data—critical for regulatory reporting, risk management, and alpha generation.</li>
+                    </ul>
+                    <p>Investing in robust data quality practices pays dividends in confidence, speed, and business impact. Firms that prioritize data tests and surrogate keys spend less time firefighting and more time delivering insights that drive performance. In a world where data is a strategic asset, reliability is non-negotiable.</p>
+                    <a href="#blog" onclick="this.parentElement.style.display='none';">← Back to Blog</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE OFFERINGS (ALT BG) -->
+        <section id="offerings" style="background-color: #181A1B;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What I Actually Do</h2>
+                    <p class="lead" style="font-size: 1.15rem; margin-top: 16px;">I make your tech not suck. You get a modern, maintainable, and high-performance data & analytics stack—no more duct tape, no more black boxes.</p>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Modern Data Platform Architecture</h3>
+                        <p>Centralize, clean up, and automate your data. I build scalable, cloud-native platforms (Snowflake, dbt, etc.) that actually work for investment teams, not against them.</p>
+                    </div>
+                    <div class="card">
+                        <h3>AI & Machine Learning Integration</h3>
+                        <p>Bring real predictive power to your process. I build and deploy practical AI/ML—factor models, NLP, anomaly detection—so your team can move faster and smarter.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Custom Quantitative Analytics</h3>
+                        <p>Dashboards, backtests, risk models, and more—tailored to your exact needs. I deliver tools your team will actually use (and understand).</p>
+                    </div>
+                </div>
+                <div style="margin-top:60px;"></div>
+                <!-- ENGAGEMENT PROCESS SECTION (ALT BG) -->
+                <div class="section-header">
+                    <h2>How It Works</h2>
+                    <p class="lead" style="font-size:1.1rem;max-width:700px;margin:0 auto;">No fluff. Here’s how I get your data and analytics stack from chaos to competitive advantage.</p>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <h3>1. Assess & Align</h3>
+                        <p>I dig in with your team to map out what’s broken, what’s working, and what you actually need. No generic audits—just real conversations and a clear plan.</p>
+                    </div>
+                    <div class="card">
+                        <h3>2. Build & Integrate</h3>
+                        <p>I roll up my sleeves and build the right solutions—data pipelines, analytics, AI/ML, whatever moves the needle. I work alongside your team, not in a silo, and adapt as we go.</p>
+                    </div>
+                    <div class="card">
+                        <h3>3. Train & Hand Off</h3>
+                        <p>I make sure your team can run with everything we’ve built. That means hands-on training, docs, and support—so you’re not left with a black box or a pile of code nobody understands.</p>
+                    </div>
+                </div>
+                <div style="text-align:center;margin-top:32px;">
+                    <p style="color:var(--text-secondary);font-size:1.05rem;max-width:700px;margin:0 auto;">I embed with your team, build what matters, and make sure you own it. No endless consulting, no buzzwords—just results.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- THE PINPOINT ADVANTAGE -->
+        <section id="advantage">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Pinpoint Advantage</h2>
+                    <p class="lead" style="font-size: 1.15rem; margin-top: 16px;">Why partner with a dedicated practitioner over a traditional consulting firm?</p>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M234.38,210a121.37,121.37,0,0,0-212.76,0,16,16,0,1,0,28.76,12c14.54-20.27,34.83-36.46,58.33-46.07a72,72,0,1,0-71.39-71.39A121.37,121.37,0,0,0,21.62,210a16,16,0,1,0,28.76,12A89.13,89.13,0,0,1,128,64a88,88,0,0,1,88,88,89.13,89.13,0,0,1-77.65,86.76A16,16,0,1,0,150.38,210c23.5-9.61,43.79-25.8,58.33-46.07A16,16,0,0,0,234.38,210ZM128,192a56,56,0,1,1,56-56A56.06,56.06,0,0,1,128,192Z"></path></svg>
+                        </div>
+                        <h3>Principal-Led Engagement</h3>
+                        <p>You work directly with me, the principal. There are no layers of management or junior staff. Every line of code, architectural decision, and strategic recommendation is handled by an 18-year industry veteran.</p>
+                    </div>
+                    <div class="card">
+                       <div class="icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M248,128a88.1,88.1,0,0,1-88,88H88a88,88,0,0,1,0-176h72a88.1,88.1,0,0,1,88,88Zm-16,0a72.08,72.08,0,0,0-72-72H88a72,72,0,0,0,0,144h72A72.08,72.08,0,0,0,232,128Zm-84.49-28.49a12,12,0,1,0-17,17L142,128l-11.51,11.51a12,12,0,0,0,17,17L159,145l11.51,11.51a12,12,0,0,0,17-17L176,128l11.51-11.51a12,12,0,0,0-17-17L159,111Z"></path></svg>
+                        </div>
+                        <h3>Focus on Operational Leverage</h3>
+                        <p>My goal is not to create dependency, but to empower your team. I build systems that are well-documented, easy to maintain, and designed to give your internal talent leverage to perform at a higher level long after our engagement ends.</p>
+                    </div>
+                    <div class="card">
+                       <div class="icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M228,80v96a12,12,0,0,1-12,12H40a12,12,0,0,1-12-12V80A12,12,0,0,1,40,68H216A12,12,0,0,1,228,80Zm-16,4a8,8,0,0,0-8-8H48a8,8,0,0,0-8,8v88a8,8,0,0,0,8,8H204a8,8,0,0,0,8-8Zm-40-68H84a12,12,0,0,0,0,24h80a12,12,0,0,0,0-24Z"></path></svg>
+                        </div>
+                        <h3>Deep Domain Fluency</h3>
+                        <p>I speak the language of the buy-side. From portfolio accounting nuances to the challenges of alternative data, I understand the context behind the technology. This ensures we build solutions that are not just technically sound, but strategically relevant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT (ALT BG) -->
+        <section id="about" style="background-color: var(--bg-color);">
+            <div class="container" style="display:flex;align-items:center;gap:60px;flex-wrap:wrap;">
+                <div class="bio-image" style="background:url('https://www.gravatar.com/avatar/0e4e1e2e2e2e2e2e2e2e2e2e?d=mp&s=300') center/cover no-repeat;"></div>
+                <div>
+                    <h2>About Kevin Glancy</h2>
+                    <p style="color:var(--text-primary);font-size:1.15rem;">I'm Kevin Glancy, founder of Pinpoint Quantitative. For 18 years, I've been building and fixing data and analytics systems for investment managers—on the inside, not just as a consultant. I’ve led modernization at T. Rowe Price, State of Wisconsin Investment Board, and Northwestern Mutual, and I know what it takes to make tech work in the real world.</p>
+                    <p style="color:var(--text-secondary);">I started Pinpoint Quantitative because most consulting is too slow, too generic, and too disconnected from what investment teams actually need. I work directly with you, build what matters, and make sure your team can run with it. No layers, no handoffs, no BS.</p>
+                    <p style="color:var(--text-secondary);">If you want a partner who will get in the trenches, build real solutions, and leave your team stronger, let’s talk.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT (ALT BG) -->
+        <section id="contact" style="background-color: #181A1B;">
+            <div class="container" style="text-align: center;max-width:600px;">
+                <div class="section-header">
+                    <h2>Build Your Definitive Data Advantage</h2>
+                    <p class="lead">
+                        Let's discuss how a tailored data and AI strategy can address your firm's unique challenges and unlock new opportunities for growth.
+                    </p>
+                </div>
+                <div style="margin: 0 auto 32px auto;">
+                    <a href="mailto:kevin@pinpointquant.com" class="cta-button" style="width:100%;margin-bottom:18px;">Email Kevin Directly</a>
+                    <div style="margin:18px 0;color:var(--text-secondary);font-size:1.08rem;">or connect on LinkedIn:</div>
+                    <a href="https://www.linkedin.com/in/kevinglancy" target="_blank" rel="noopener noreferrer" class="cta-button" style="width:100%;background:var(--card-bg);color:var(--accent-blue);border:1.5px solid var(--accent-blue);">Message on LinkedIn</a>
+                </div>
+                <div style="color:var(--text-secondary);font-size:0.98rem;margin-top:24px;">No forms, no friction. Just reach out directly—I'll respond within one business day.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Pinpoint Quantitative. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/kevinglancy" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                 • 
+                <a href="mailto:kevin@pinpointquant.com">Email</a>
+                 • 
+                <a href="#privacy" onclick="document.getElementById('privacy-modal').style.display='block';return false;">Privacy & Compliance</a>
+            </div>
+        </div>
+        <!-- Privacy Modal -->
+        <div id="privacy-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);z-index:3000;">
+            <div style="background:var(--card-bg);color:var(--text-primary);max-width:600px;margin:80px auto;padding:40px 32px;border-radius:12px;position:relative;">
+                <button onclick="document.getElementById('privacy-modal').style.display='none';" style="position:absolute;top:16px;right:16px;background:none;border:none;color:var(--accent-blue);font-size:1.5rem;cursor:pointer;">&times;</button>
+                <h2 style="margin-bottom:18px;">Privacy & Compliance</h2>
+                <p>Your data security and confidentiality are paramount. I follow industry best practices for data protection, including:</p>
+                <ul style="margin-bottom:18px;">
+                    <li>Strict confidentiality and non-disclosure for all client information and intellectual property.</li>
+                    <li>Secure handling of sensitive data, with access controls and encryption where appropriate.</li>
+                    <li>Compliance with all relevant data privacy regulations (including GDPR, CCPA, and industry-specific standards).</li>
+                    <li>Willingness to sign NDAs and comply with your firm’s internal security protocols.</li>
+                </ul>
+                <p>Every engagement begins with a discussion of your compliance requirements. I am committed to building solutions that are not only powerful, but also secure and fully aligned with your firm’s risk and regulatory needs.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
